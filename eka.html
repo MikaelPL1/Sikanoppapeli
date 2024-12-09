@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikanoppapeli yhdellä nopalla</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Sikanoppapeli yhdellä nopalla</h1>
+  <div class="container" id="pelic">
+    <h2>Valitse pelaajat</h2>
+    <form id="playerForm">
+      <label for="pmaara">Valitse pelaajien määrä (2-4):</label>
+      <select id="pmaara" required>
+        <option value="" disabled selected>Valitse...</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <div id="playerNames" class="hidden">
+        <h3>Syötä pelaajien nimet:</h3>
+      </div>
+      <button type="submit" class="btn">Aloita peli</button>
+    </form>
+  </div>
+
+  <div class="container hidden" id="pelib">
+    <h2 id="nowpelaaja"></h2>
+    <p id="winnerMessage" class="hidden winner"></p>
+    <div id="diceContainer">
+      <img id="diceImage" src="nopat/Dice-1.png" alt="Noppa" />
+    </div>
+    <p id="turnScore">Vuoron pisteet: 0</p>
+    <button id="rolln" class="btn">Heitä noppaa</button>
+    <button id="vuorov" class="btn">Lopeta vuoro</button>
+    <h3>Pisteet:</h3>
+    <ul id="scoreboard"></ul>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikanoppapeli kahdella nopalla</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <h1>Sikanoppapeli kahdella nopalla</h1>
+
+    <div id="pelib">
+        <h2>Valitse pelaajat</h2>
+        <form id="playerForm">
+            <label for="pmaara">Valitse pelaajien määrä (2-4):</label>
+            <select id="pmaara" required>
+                <option value="" disabled selected>Valitse...</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <div id="playerNames" class="hidden">
+                <h3>Syötä pelaajien nimet:</h3>
+              </div>
+
+            <button type="submit" id="aloitabtn" disabled>Aloita peli</button>
+        </form>
+    </div>
+
+    <div id="pelic" class="hidden">
+        <h2 id="nowpelaaja"></h2>
+        <div>
+            <img id="dice1Image" src="nopat/Dice-1.png" alt="Noppa 1">
+            <img id="dice2Image" src="nopat/Dice-1.png" alt="Noppa 2">
+        </div>
+        <p id="nowpisteet">Vuoron pisteet: 0</p>
+        <button id="rolln">Heitä nopat</button>
+        <button id="vuorov">Lopeta vuoro</button>
+
+        <h3>Pisteet:</h3>
+        <ul id="scoreboard"></ul>
+
+        <p id="winnerMessage" class="hidden"></p>
+    </div>
+
+    <script src="main2.js"></script>
+</body>
+</html>
+
